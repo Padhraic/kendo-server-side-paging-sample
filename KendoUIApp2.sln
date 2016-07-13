@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KendoUIApp2", "KendoUIApp2\KendoUIApp2.csproj", "{DCE5F55E-E624-4C82-8E2D-31AB206AE2F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KendoUIApp2Tests", "KendoUIApp2Tests\KendoUIApp2Tests.csproj", "{9F7F1431-2A0E-4AEF-863B-F60463E4B782}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCE5F55E-E624-4C82-8E2D-31AB206AE2F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCE5F55E-E624-4C82-8E2D-31AB206AE2F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCE5F55E-E624-4C82-8E2D-31AB206AE2F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCE5F55E-E624-4C82-8E2D-31AB206AE2F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F7F1431-2A0E-4AEF-863B-F60463E4B782}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F7F1431-2A0E-4AEF-863B-F60463E4B782}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F7F1431-2A0E-4AEF-863B-F60463E4B782}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F7F1431-2A0E-4AEF-863B-F60463E4B782}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

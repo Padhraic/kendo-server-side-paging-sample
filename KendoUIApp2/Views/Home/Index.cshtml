@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<h3>Telerik UI for ASP.NET MVC PanelBar</h3>
+<br />
+	<input id="startdate" value="10/10/2011">
+<input id="enddate" value="10/10/2016">
+
+<div id="grid"></div>
+
+<script type="text/javascript">
+j$ = jQuery.noConflict();
+
+j$(document).ready(function () {
+
+	j$("#startdate").kendoDatePicker();
+	j$("#enddate").kendoDatePicker();
+
+    j$("#grid").kendoGrid({
+        dataSource: {
+            transport: {
+                read: {
+                    url: "GetData",
+                    contentType: "application/json",
+                    type: "POST",
+                    dataType: "Json",
+                    data: {
+                        startDate: j$("#startdate").val(),
+                        endDate: j$("#enddate").val()
+                    }
+                },
+                parameterMap: function (data, operation) {
+                    return JSON.stringify(data);
+                }
+            },
+            pageSize: 5,
+            serverPaging: true,
+            serverFiltering: true,
+            serverSorting: true,
+            sort: { Field: "Id", Dir: "desc" },
+            schema: {
+                model:{
+                    id: "Id",
+                    fields: {
+                        Id: { type: "number" },
+                        state: { type: "number" },
+                        PoolName: { from:"pool_name", type: "string" },
+                        Submitter: { from: "submitter", type: "string" },
+                    }
+                },
+                data: "Data",
+                total: "Total"
+            }
+        },
+        height: j$(window).height() - 85,
+        groupable: true,
+        sortable: true,
+        filterable: false,
+        columnMenu: true,
+        pageable: true,
+        columns: [
+            { field: "Id", title: "Job Id"},
+            { field: "PoolName", title: "Pool Name" },
+            { field: "State", title: "State" },
+            { field: "Submitter", title: "Submitter" }
+        ]
+    });
+
+});
+
+</script>
